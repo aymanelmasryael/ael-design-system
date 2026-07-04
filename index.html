@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AEL Design System — Ayman Elmasry</title>
+  <link rel="icon" type="image/svg+xml" href="ael-logo.svg">
+  <link rel="stylesheet" href="ael_design_system.css">
+</head>
+<body>
+  <div class="cursor-glow" id="cursorGlow"></div>
+  <div class="noise"></div>
+
+  <nav class="navbar glass" id="navbar">
+    <div class="nav-brand">
+      <img src="ael-logo.svg" alt="AEL" class="nav-logo-img">
+      <div class="nav-title">
+        <span class="nav-name">AYMAN ELMASRY</span>
+        <span class="nav-studio">AEL Digital Studio</span>
+      </div>
+    </div>
+    <div class="nav-links" id="navLinks">
+      <a href="#overview" class="nav-link active">Overview</a>
+      <a href="#components" class="nav-link">Components</a>
+      <a href="#colors" class="nav-link">Colors</a>
+      <a href="#typography" class="nav-link">Typography</a>
+      <a href="#code" class="nav-link">Code</a>
+      <a href="#about" class="nav-link">About</a>
+    </div>
+    <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
+  </nav>
+
+  <!-- Overview -->
+  <section id="overview" class="section active">
+    <div class="section-bg"><div class="orb orb-1"></div><div class="orb orb-2"></div></div>
+    <div class="container hero">
+      <div class="hero-badge glass"><span class="badge-dot"></span> v1.0 — AEL Studio</div>
+      <h1 class="hero-title"><span class="text-gradient">AEL Design</span><span class="hero-sub">System</span></h1>
+      <p class="hero-desc">A reusable component library built with the AEL design language — glassmorphism, <strong>#0074FF</strong> accents, and dark theme. Copy-paste ready for any project.</p>
+      <div class="hero-stats">
+        <div class="stat-card glass"><span class="stat-icon">🧩</span><span class="stat-value">12</span><span class="stat-label">Components</span></div>
+        <div class="stat-card glass"><span class="stat-icon">🎨</span><span class="stat-value">40+</span><span class="stat-label">Variants</span></div>
+        <div class="stat-card glass"><span class="stat-icon">📦</span><span class="stat-value">0</span><span class="stat-label">Dependencies</span></div>
+        <div class="stat-card glass"><span class="stat-icon">⚡</span><span class="stat-value">1</span><span class="stat-label">CSS File</span></div>
+      </div>
+      <div class="showcase-preview glass">
+        <div class="showcase-row"><button class="btn-primary">Primary</button><button class="btn-secondary">Secondary</button><span class="badge">Badge</span><span class="tag">Tag</span></div>
+        <div class="showcase-row"><div class="toggle on"><span></span></div><input type="text" class="input" value="Input field" readonly><div class="spinner"></div></div>
+      </div>
+      <a href="#components" class="btn-primary glass" id="heroCta">Browse Components <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    </div>
+  </section>
+
+  <!-- Components -->
+  <section id="components" class="section">
+    <div class="section-bg"><div class="orb orb-1"></div></div>
+    <div class="container">
+      <div class="section-header"><span class="section-badge glass">🧩 Components</span><h2>Component Library</h2><p>Live previews of all AEL Design System components</p></div>
+      <div class="component-nav glass" id="componentNav">
+        <button class="comp-tab active" data-comp="buttons">Buttons</button>
+        <button class="comp-tab" data-comp="inputs">Inputs</button>
+        <button class="comp-tab" data-comp="cards">Cards</button>
+        <button class="comp-tab" data-comp="badges">Badges</button>
+        <button class="comp-tab" data-comp="loaders">Loaders</button>
+        <button class="comp-tab" data-comp="toggles">Toggles</button>
+        <button class="comp-tab" data-comp="navigation">Nav</button>
+        <button class="comp-tab" data-comp="alerts">Alerts</button>
+      </div>
+      <div class="component-panel active" id="panel-buttons">
+        <div class="comp-group"><h3 class="comp-title">Primary Button</h3><div class="comp-preview glass"><button class="btn-primary">Primary</button><button class="btn-primary" disabled>Disabled</button></div><pre class="comp-code glass"><code>&lt;button class="btn-primary"&gt;Primary&lt;/button&gt;</code><button class="copy-btn" data-code='<button class="btn-primary">Primary</button>'>Copy</button></pre></div>
+        <div class="comp-group"><h3 class="comp-title">Secondary Button</h3><div class="comp-preview glass"><button class="btn-secondary">Secondary</button><button class="btn-secondary" disabled>Disabled</button></div><pre class="comp-code glass"><code>&lt;button class="btn-secondary"&gt;Secondary&lt;/button&gt;</code><button class="copy-btn" data-code='<button class="btn-secondary">Secondary</button>'>Copy</button></pre></div>
+        <div class="comp-group"><h3 class="comp-title">Ghost Button</h3><div class="comp-preview glass"><button class="btn-ghost">Ghost</button><button class="btn-ghost" disabled>Disabled</button></div><pre class="comp-code glass"><code>&lt;button class="btn-ghost"&gt;Ghost&lt;/button&gt;</code><button class="copy-btn" data-code='<button class="btn-ghost">Ghost</button>'>Copy</button></pre></div>
+        <div class="comp-group"><h3 class="comp-title">Icon Button</h3><div class="comp-preview glass"><button class="btn-icon" aria-label="Search"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg></button><button class="btn-icon" aria-label="Menu"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button></div><pre class="comp-code glass"><code>&lt;button class="btn-icon" aria-label="Search"&gt;...&lt;/button&gt;</code><button class="copy-btn" data-code='<button class="btn-icon" aria-label="Search">🔍</button>'>Copy</button></pre></div>
+      </div>
+      <div class="component-panel" id="panel-inputs">
+        <div class="comp-group"><h3 class="comp-title">Text Input</h3><div class="comp-preview glass"><input type="text" class="input" placeholder="Enter text..."><input type="text" class="input" placeholder="Disabled" disabled></div><pre class="comp-code glass"><code>&lt;input type="text" class="input" placeholder="Enter text..."&gt;</code><button class="copy-btn" data-code='<input type="text" class="input" placeholder="Enter text...">'>Copy</button></pre></div>
+        <div class="comp-group"><h3 class="comp-title">Select</h3><div class="comp-preview glass"><select class="select"><option>Option 1</option><option>Option 2</option><option>Option 3</option></select><select class="select" disabled><option>Disabled</option></select></div><pre class="comp-code glass"><code>&lt;select class="select"&gt;&lt;option&gt;Option&lt;/option&gt;&lt;/select&gt;</code><button class="copy-btn" data-code='<select class="select"><option>Option</option></select>'>Copy</button></pre></div>
+        <div class="comp-group"><h3 class="comp-title">Textarea</h3><div class="comp-preview glass"><textarea class="textarea" placeholder="Write something..." rows="3"></textarea></div><pre class="comp-code glass"><code>&lt;textarea class="textarea" placeholder="Write..." rows="3"&gt;&lt;/textarea&gt;</code><button class="copy-btn" data-code='<textarea class="textarea" placeholder="Write..." rows="3"></textarea>'>Copy</button></pre></div>
+      </div>
+      <div class="component-panel" id="panel-cards">
+        <div class="comp-group"><h3 class="comp-title">Glass Card</h3><div class="comp-preview glass card-examples"><div class="card glass" style="width:200px"><div class="card-body"><h4>Card Title</h4><p>Card content goes here with glass effect.</p></div></div><div class="card glass card-hover" style="width:200px"><div class="card-body"><h4>Hover Card</h4><p>This card lifts on hover.</p></div></div></div><pre class="comp-code glass"><code>&lt;div class="card glass"&gt;&lt;div class="card-body"&gt;&lt;h4&gt;Title&lt;/h4&gt;&lt;p&gt;Content&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;</code><button class="copy-btn" data-code='<div class="card glass"><div class="card-body"><h4>Title</h4><p>Content</p></div></div>'>Copy</button></pre></div>
+      </div>
+      <div class="component-panel" id="panel-badges">
+        <div class="comp-group"><h3 class="comp-title">Badges</h3><div class="comp-preview glass"><span class="badge">Default</span><span class="badge badge-primary">Primary</span><span class="badge badge-success">Success</span><span class="badge badge-warning">Warning</span><span class="badge badge-danger">Danger</span><span class="badge badge-gold">Premium</span></div><pre class="comp-code glass"><code>&lt;span class="badge badge-primary"&gt;Primary&lt;/span&gt;</code><button class="copy-btn" data-code='<span class="badge badge-primary">Primary</span>'>Copy</button></pre></div>
+        <div class="comp-group"><h3 class="comp-title">Tags</h3><div class="comp-preview glass"><span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">CSS</span><span class="tag">Node.js</span></div><pre class="comp-code glass"><code>&lt;span class="tag"&gt;React&lt;/span&gt;</code><button class="copy-btn" data-code='<span class="tag">React</span>'>Copy</button></pre></div>
+      </div>
+      <div class="component-panel" id="panel-loaders">
+        <div class="comp-group"><h3 class="comp-title">Spinner</h3><div class="comp-preview glass"><div class="spinner"></div><div class="spinner spinner-sm"></div><div class="spinner spinner-lg"></div></div><pre class="comp-code glass"><code>&lt;div class="spinner"&gt;&lt;/div&gt;</code><button class="copy-btn" data-code='<div class="spinner"></div>'>Copy</button></pre></div>
+        <div class="comp-group"><h3 class="comp-title">Dots</h3><div class="comp-preview glass"><div class="dots"><span></span><span></span><span></span></div></div><pre class="comp-code glass"><code>&lt;div class="dots"&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/div&gt;</code><button class="copy-btn" data-code='<div class="dots"><span></span><span></span><span></span></div>'>Copy</button></pre></div>
+        <div class="comp-group"><h3 class="comp-title">Skeleton</h3><div class="comp-preview glass"><div class="skeleton" style="width:200px;height:16px"></div><div class="skeleton" style="width:160px;height:16px;margin-top:8px"></div><div class="skeleton" style="width:240px;height:80px;margin-top:8px"></div></div><pre class="comp-code glass"><code>&lt;div class="skeleton" style="width:200px;height:16px"&gt;&lt;/div&gt;</code><button class="copy-btn" data-code='<div class="skeleton" style="width:200px;height:16px"></div>'>Copy</button></pre></div>
+      </div>
+      <div class="component-panel" id="panel-toggles">
+        <div class="comp-group"><h3 class="comp-title">Toggle Switch</h3><div class="comp-preview glass"><div class="toggle" role="switch" tabindex="0"><span></span></div><div class="toggle on" role="switch" tabindex="0"><span></span></div></div><pre class="comp-code glass"><code>&lt;div class="toggle" role="switch" tabindex="0"&gt;&lt;span&gt;&lt;/span&gt;&lt;/div&gt;</code><button class="copy-btn" data-code='<div class="toggle" role="switch" tabindex="0"><span></span></div>'>Copy</button></pre></div>
+        <div class="comp-group"><h3 class="comp-title">Range Slider</h3><div class="comp-preview glass"><input type="range" class="range" min="0" max="100" value="50"></div><pre class="comp-code glass"><code>&lt;input type="range" class="range" min="0" max="100" value="50"&gt;</code><button class="copy-btn" data-code='<input type="range" class="range" min="0" max="100" value="50">'>Copy</button></pre></div>
+        <div class="comp-group"><h3 class="comp-title">Checkbox & Radio</h3><div class="comp-preview glass"><label class="checkbox"><input type="checkbox"><span class="checkmark"></span>Checkbox</label><label class="checkbox"><input type="checkbox" checked><span class="checkmark"></span>Checked</label><label class="radio"><input type="radio" name="r"><span class="radiomark"></span>Radio</label></div><pre class="comp-code glass"><code>&lt;label class="checkbox"&gt;&lt;input type="checkbox"&gt;&lt;span class="checkmark"&gt;&lt;/span&gt;Label&lt;/label&gt;</code><button class="copy-btn" data-code='<label class="checkbox"><input type="checkbox"><span class="checkmark"></span>Label</label>'>Copy</button></pre></div>
+      </div>
+      <div class="component-panel" id="panel-navigation">
+        <div class="comp-group"><h3 class="comp-title">Navbar (reference)</h3><div class="comp-preview glass" style="flex-direction:column"><small style="color:var(--text-muted);margin-bottom:8px">This page uses the AEL Navbar — scroll up to see it</small><div class="nav-tabs"><button class="nav-tab active">Tab 1</button><button class="nav-tab">Tab 2</button><button class="nav-tab">Tab 3</button></div></div><pre class="comp-code glass"><code>&lt;div class="nav-tabs"&gt;&lt;button class="nav-tab active"&gt;Tab&lt;/button&gt;&lt;/div&gt;</code><button class="copy-btn" data-code='<div class="nav-tabs"><button class="nav-tab active">Tab 1</button><button class="nav-tab">Tab 2</button></div>'>Copy</button></pre></div>
+      </div>
+      <div class="component-panel" id="panel-alerts">
+        <div class="comp-group"><h3 class="comp-title">Alerts</h3><div class="comp-preview glass" style="flex-direction:column;gap:8px"><div class="alert"><strong>Info</strong> — This is an informational message</div><div class="alert alert-success"><strong>Success</strong> — Operation completed</div><div class="alert alert-warning"><strong>Warning</strong> — Check your input</div><div class="alert alert-danger"><strong>Error</strong> — Something went wrong</div></div><pre class="comp-code glass"><code>&lt;div class="alert alert-success"&gt;&lt;strong&gt;Success&lt;/strong&gt; — Message&lt;/div&gt;</code><button class="copy-btn" data-code='<div class="alert alert-success"><strong>Success</strong> — Message</div>'>Copy</button></pre></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Colors -->
+  <section id="colors" class="section">
+    <div class="section-bg"><div class="orb orb-2"></div></div>
+    <div class="container">
+      <div class="section-header"><span class="section-badge glass">🎨 Colors</span><h2>Color System</h2><p>CSS custom properties for the AEL design language</p></div>
+      <div class="color-grid" id="colorGrid"></div>
+      <div class="color-usage glass"><h3>Usage</h3><pre class="code-block"><code>:root {
+  --primary: #0074FF;
+  --primary-dark: #0052b3;
+  --primary-light: #4d9bff;
+  --gold: #ffd700;
+  --success: #10b981;
+  --bg-deep: #000;
+  --bg-card: rgba(5,12,24,.7);
+  --text-primary: #eef2ff;
+  --text-secondary: #9ab3e6;
+  --text-muted: #64748b;
+}</code><button class="copy-btn" data-code=':root {\n  --primary: #0074FF;\n  --primary-dark: #0052b3;\n  --primary-light: #4d9bff;\n  --gold: #ffd700;\n  --success: #10b981;\n  --bg-deep: #000;\n  --bg-card: rgba(5,12,24,.7);\n  --text-primary: #eef2ff;\n  --text-secondary: #9ab3e6;\n  --text-muted: #64748b;\n}'>Copy</button></pre></div>
+    </div>
+  </section>
+
+  <!-- Typography -->
+  <section id="typography" class="section">
+    <div class="section-bg"><div class="orb orb-1"></div></div>
+    <div class="container">
+      <div class="section-header"><span class="section-badge glass">🔤 Typography</span><h2>Typography Scale</h2><p>Font sizes, weights, and styles available</p></div>
+      <div class="typo-grid">
+        <div class="typo-card glass"><h1 style="font-size:56px">H1. Hero</h1><code class="typo-meta">56px / Bold / Gradient</code></div>
+        <div class="typo-card glass"><h2 style="font-size:36px">H2. Section Title</h2><code class="typo-meta">36px / Bold / Gradient</code></div>
+        <div class="typo-card glass"><h3 style="font-size:24px">H3. Card Title</h3><code class="typo-meta">24px / Bold / #eef2ff</code></div>
+        <div class="typo-card glass"><h4 style="font-size:18px">H4. Component Title</h4><code class="typo-meta">18px / Bold / #eef2ff</code></div>
+        <div class="typo-card glass"><p style="font-size:15px">Body. Standard paragraph text for reading content across components and sections. This is the default body size.</p><code class="typo-meta">15px / Regular / #9ab3e6</code></div>
+        <div class="typo-card glass"><p style="font-size:13px">Small. Secondary text, descriptions, and metadata across the UI.</p><code class="typo-meta">13px / Regular / #9ab3e6</code></div>
+        <div class="typo-card glass"><span style="font-size:11px;font-family:var(--font-mono)">Mono. Code, stats, badges, technical info.</span><code class="typo-meta">11px / Mono / #64748b</code></div>
+        <div class="typo-card glass"><span class="text-gradient" style="font-size:20px;font-weight:bold">Gradient Text — for hero titles and highlights</span><code class="typo-meta">Gradient / #0074FF → #4d9bff</code></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Code -->
+  <section id="code" class="section">
+    <div class="section-bg"><div class="orb orb-2"></div></div>
+    <div class="container">
+      <div class="section-header"><span class="section-badge glass">📦 Code</span><h2>Quick Start</h2><p>Copy the complete CSS to use the AEL Design System</p></div>
+      <div class="code-container">
+        <div class="code-tabs glass">
+          <button class="code-tab active" data-file="css">CSS</button>
+          <button class="code-tab" data-file="html">HTML Template</button>
+          <button class="code-tab" data-file="import">Import Guide</button>
+        </div>
+        <div class="code-panel active" id="code-css">
+          <pre class="code-block glass"><code id="cssCode">/* AEL Design System v1.0 — Paste this CSS into your project */
+:root {
+  --primary: #0074FF;  --primary-dark: #0052b3;
+  --primary-light: #4d9bff;  --gold: #ffd700;
+  --success: #10b981;  --bg-deep: #000;
+  --bg-card: rgba(5,12,24,.7);  --text-primary: #eef2ff;
+  --text-secondary: #9ab3e6;  --text-muted: #64748b;
+  --font-mono: 'SF Mono','Fira Code',monospace;
+  --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+}
+.glass { background: var(--bg-card); backdrop-filter: blur(20px) saturate(1.4); border: 1px solid rgba(0,116,255,.25); }
+.btn-primary, .btn-secondary, .btn-ghost { padding: 10px 24px; border-radius: 40px; font-family: var(--font-mono); font-size: 12px; cursor: pointer; transition: all .2s; border: 1px solid var(--border-color); }
+.btn-primary { background: var(--primary); color: #fff; border: none; }
+.btn-primary:hover { box-shadow: 0 0 30px rgba(0,116,255,.25); transform: translateY(-1px); }
+.btn-secondary { background: transparent; color: var(--text-primary); }
+.btn-secondary:hover { border-color: var(--primary); }
+.btn-ghost { background: transparent; color: var(--text-muted); border-color: transparent; }
+.btn-ghost:hover { color: var(--text-primary); background: rgba(255,255,255,.05); }
+.btn-icon { width: 38px; height: 38px; border-radius: 10px; border: 1px solid var(--border-color); background: transparent; color: var(--text-muted); cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all .2s; }
+.btn-icon:hover { border-color: var(--primary); color: var(--text-primary); }
+.input { background: rgba(1,5,14,.7); border: 1px solid var(--border-color); color: var(--text-primary); padding: 10px 14px; border-radius: 8px; font-family: var(--font-sans); font-size: 13px; outline: none; width: 100%; transition: border-color .2s; }
+.input:focus { border-color: var(--primary); }
+.select { background: rgba(1,5,14,.7); border: 1px solid var(--border-color); color: var(--text-primary); padding: 10px 14px; border-radius: 8px; font-family: var(--font-mono); font-size: 12px; cursor: pointer; outline: none; }
+.select:focus { border-color: var(--primary); }
+.textarea { background: rgba(1,5,14,.7); border: 1px solid var(--border-color); color: var(--text-primary); padding: 10px 14px; border-radius: 8px; font-family: var(--font-sans); font-size: 13px; outline: none; width: 100%; resize: vertical; transition: border-color .2s; }
+.textarea:focus { border-color: var(--primary); }
+.card { padding: 20px; border-radius: 16px; }
+.card-hover { transition: all .3s; }
+.card-hover:hover { transform: translateY(-4px); border-color: var(--primary); }
+.card-body h4 { font-size: 16px; font-weight: bold; color: var(--text-primary); margin-bottom: 8px; }
+.card-body p { font-size: 13px; color: var(--text-secondary); line-height: 1.6; }
+.badge { padding: 4px 12px; border-radius: 12px; font-family: var(--font-mono); font-size: 10px; background: rgba(255,255,255,.08); color: var(--text-muted); }
+.badge-primary { background: rgba(0,116,255,.15); color: var(--primary-light); }
+.badge-success { background: rgba(16,185,129,.15); color: var(--success); }
+.badge-warning { background: rgba(255,215,0,.15); color: var(--gold); }
+.badge-danger { background: rgba(239,68,68,.15); color: #ef4444; }
+.badge-gold { background: rgba(255,215,0,.15); color: var(--gold); border-color: rgba(255,215,0,.3); }
+.tag { padding: 3px 10px; border-radius: 12px; font-family: var(--font-mono); font-size: 10px; background: rgba(0,116,255,.1); color: var(--primary-light); }
+.spinner { width: 24px; height: 24px; border: 2px solid var(--border-color); border-top-color: var(--primary); border-radius: 50%; animation: spin .6s linear infinite; }
+.spinner-sm { width: 16px; height: 16px; border-width: 2px; }
+.spinner-lg { width: 36px; height: 36px; border-width: 3px; }
+@keyframes spin { to { transform: rotate(360deg); } }
+.dots { display: flex; align-items: center; gap: 4px; }
+.dots span { width: 8px; height: 8px; border-radius: 50%; background: var(--text-muted); animation: dot-bounce 1.4s infinite; }
+.dots span:nth-child(2) { animation-delay: .2s; }
+.dots span:nth-child(3) { animation-delay: .4s; }
+@keyframes dot-bounce { 0%,60%,100% { transform: translateY(0); } 30% { transform: translateY(-6px); } }
+.skeleton { background: linear-gradient(90deg, rgba(255,255,255,.06) 25%, rgba(255,255,255,.12) 50%, rgba(255,255,255,.06) 75%); background-size: 200% 100%; animation: shimmer 1.5s infinite; border-radius: 6px; }
+@keyframes shimmer { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
+.toggle { width: 44px; height: 24px; border-radius: 12px; background: rgba(255,255,255,.15); cursor: pointer; position: relative; transition: background .2s; }
+.toggle.on { background: var(--primary); }
+.toggle span { position: absolute; top: 2px; left: 2px; width: 20px; height: 20px; border-radius: 50%; background: #fff; transition: transform .2s; }
+.toggle.on span { transform: translateX(20px); }
+.range { -webkit-appearance: none; appearance: none; width: 100%; height: 6px; border-radius: 3px; background: rgba(255,255,255,.1); outline: none; cursor: pointer; }
+.range::-webkit-slider-thumb { -webkit-appearance: none; width: 18px; height: 18px; border-radius: 50%; background: var(--primary); cursor: pointer; border: 2px solid #000; box-shadow: 0 0 10px rgba(0,116,255,.25); }
+.checkbox, .radio { display: inline-flex; align-items: center; gap: 8px; cursor: pointer; font-size: 13px; color: var(--text-secondary); }
+.checkbox input, .radio input { display: none; }
+.checkmark, .radiomark { width: 18px; height: 18px; border-radius: 4px; border: 2px solid var(--border-color); display: flex; align-items: center; justify-content: center; transition: all .2s; flex-shrink: 0; }
+.radiomark { border-radius: 50%; }
+.checkbox input:checked + .checkmark { background: var(--primary); border-color: var(--primary); }
+.checkbox input:checked + .checkmark::after { content: ''; width: 6px; height: 10px; border: solid #fff; border-width: 0 2px 2px 0; transform: rotate(45deg); margin-top: -2px; }
+.radio input:checked + .radiomark { border-color: var(--primary); }
+.radio input:checked + .radiomark::after { content: ''; width: 8px; height: 8px; border-radius: 50%; background: var(--primary); }
+.nav-tabs { display: flex; gap: 4px; }
+.nav-tab { padding: 6px 14px; border-radius: 20px; border: none; background: transparent; color: var(--text-muted); font-family: var(--font-mono); font-size: 11px; cursor: pointer; transition: all .2s; }
+.nav-tab:hover { color: var(--text-primary); background: rgba(0,116,255,.1); }
+.nav-tab.active { color: var(--primary); background: rgba(0,116,255,.1); }
+.alert { padding: 12px 16px; border-radius: 10px; font-size: 13px; color: var(--text-secondary); background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.08); }
+.alert-success { background: rgba(16,185,129,.1); border-color: rgba(16,185,129,.2); color: #34d399; }
+.alert-warning { background: rgba(255,215,0,.1); border-color: rgba(255,215,0,.2); color: #fbbf24; }
+.alert-danger { background: rgba(239,68,68,.1); border-color: rgba(239,68,68,.2); color: #f87171; }
+.text-gradient { background: linear-gradient(135deg, #0074FF, #4d9bff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }</code><button class="copy-btn code-copy-btn" data-code="(full CSS)">Copy All CSS</button></pre>
+        </div>
+        <div class="code-panel" id="code-html">
+          <pre class="code-block glass"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en" data-theme="dark"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;My AEL Project&lt;/title&gt;
+  &lt;link rel="stylesheet" href="ael_design_system.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;div class="container"&gt;
+    &lt;h1 class="text-gradient"&gt;Hello, AEL&lt;/h1&gt;
+    &lt;button class="btn-primary"&gt;Get Started&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code><button class="copy-btn code-copy-btn" data-code='(see template)'>Copy Template</button></pre>
+        </div>
+        <div class="code-panel" id="code-import">
+          <pre class="code-block glass"><code>/* Option 1: Download ael_design_system.css */
+&lt;link rel="stylesheet" href="ael_design_system.css"&gt;
+
+/* Option 2: Copy the CSS variables into your project */
+/* Option 3: Use the AEL CDN (coming soon) */
+
+/* Required HTML structure:
+   - Wrap content in .container for max-width
+   - Use .glass for glassmorphism effects
+   - Add data-theme="dark" to &lt;html&gt; for dark mode
+*/</code><button class="copy-btn code-copy-btn" data-code='(see guide)'>Copy Guide</button></pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section">
+    <div class="section-bg"><div class="orb orb-1"></div><div class="orb orb-2"></div></div>
+    <div class="container">
+      <div class="section-header"><span class="section-badge glass">ℹ️ About</span><h2>About AEL Design System</h2><p>A reusable component library by AEL Digital Studio</p></div>
+      <div class="about-grid">
+        <div class="about-card glass"><h3>📋 Overview</h3><p>AEL Design System is a zero-dependency CSS component library following the AEL design language — dark glassmorphism, #0074FF accents, and monospace typography. Ready to use in any web project.</p></div>
+        <div class="about-card glass"><h3>⚡ Features</h3><ul class="about-list"><li>12 components with 40+ variants</li><li>Zero JavaScript dependencies</li><li>CSS custom properties for theming</li><li>Dark theme optimized</li><li>Copy-paste ready code snippets</li><li>Consistent glassmorphism design</li></ul></div>
+        <div class="about-card glass"><h3>🛠 Tech Stack</h3><ul class="about-list"><li><strong>HTML5</strong> — Semantic structure</li><li><strong>CSS3</strong> — Custom properties, flexbox, grid, animations</li><li><strong>JavaScript</strong> — Vanilla JS for interactivity (optional)</li></ul></div>
+        <div class="about-card glass"><h3>👤 Author</h3><p><strong>Ayman Elmasry</strong><br>AEL Digital Studio</p><p class="about-version">Version 1.0 — 2026</p><p class="about-license">MIT License — Free for personal and commercial use</p></div>
+      </div>
+      <div class="about-footer glass"><p>&copy; 2026 Ayman Elmasry — AEL Digital Studio. All rights reserved.</p><p class="about-tagline">Zero dependencies, maximum impact</p></div>
+    </div>
+  </section>
+
+  <script src="ael_design_system.js"></script>
+</body>
+</html>
