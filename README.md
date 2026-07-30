@@ -65,6 +65,7 @@
 ael-design-system/
 ├── index.html                  # HTML5 component showcase
 ├── ael_design_system.css       # Core CSS library
+├── ael_design_system.js        # Interactive features (optional JS)
 ├── screenshot.svg              # Project preview image
 ├── .gitignore
 └── README.md
@@ -173,7 +174,7 @@ Or copy individual component code from the **Code** section of the showcase.
 **Created by:** Ayman Elmasry — AEL Digital Studio  
 **Website:** [aymanelmasry.com](https://aymanelmasry.com)  
 **Email:** [info@aymanelmasry.com](mailto:info@aymanelmasry.com)  
-**License:** © 2026 Ayman Elmasry — AEL Digital Studio. All rights reserved.
+**License:** MIT License — Free for personal and commercial use.
 
 ### Connect
 
